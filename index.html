@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Piano Application</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- All piano sounds -->
+    <audio id="C3">
+      <source src="./wav/C3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="C3Sharp">
+      <source src="./wav/C3Sharp - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="D3">
+      <source src="./wav/D3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="D3Sharp">
+      <source src="./wav/D3Sharp - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="E3">
+      <source src="./wav/E3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="F3">
+      <source src="./wav/F3 - Upright Piano - 80.wav" />
+    </audio>
+    <audio id="F3Sharp">
+      <source src="./wav/F3Sharp - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="G3">
+      <source src="./wav/G3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="G3Sharp">
+      <source src="./wav/G3Sharp - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="A3">
+      <source src="./wav/A3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="A3Sharp">
+      <source src="./wav/A3Sharp - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <audio id="B3">
+      <source src="./wav/B3 - Upright Piano - 80.wav" type="audio/wav" />
+    </audio>
+    <div class="piano-app-background">
+      <div class="white-keys-container">
+        <div
+          id="C3-key"
+          class="white-key piano-key"
+          data-key="C3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="D3-key"
+          class="white-key piano-key"
+          data-key="D3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="E3-key"
+          class="white-key piano-key"
+          data-key="E3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="F3-key"
+          class="white-key piano-key"
+          data-key="F3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="G3-key"
+          class="white-key piano-key"
+          data-key="G3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="A3-key"
+          class="white-key piano-key"
+          data-key="A3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="B3-key"
+          class="white-key piano-key"
+          data-key="B3"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+      </div>
+      <div class="black-keys-container">
+        <div
+          id="C3Sharp-key"
+          class="black-key piano-key"
+          data-key="C3Sharp"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="D3Sharp-key"
+          class="black-key piano-key"
+          data-key="D3Sharp"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="F3Sharp-key"
+          class="black-key piano-key"
+          data-key="F3Sharp"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="G3Sharp-key"
+          class="black-key piano-key"
+          data-key="G3Sharp"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+        <div
+          id="A3Sharp-key"
+          class="black-key piano-key"
+          data-key="A3Sharp"
+          data-keystate="down"
+          data-releasenote="wait"
+        ></div>
+      </div>
+      <img
+        id="black-keys-img"
+        src="./png/Piano-black-keys.png"
+        alt="Piano-black-keys"
+        ondragstart="return false;"
+      />
+      <img
+        id="white-keys-img"
+        src="./png/Piano-white-keys.png"
+        alt="Piano-white-keys"
+        ondragstart="return false;"
+      />
+      <div class="piano-app-map">
+        <div class="piano-app-map-black-keys">
+          <div id="piano-app-w-key"><p>W</p></div>
+          <div id="piano-app-e-key">
+            <p class="piano-app-letter-padding">E</p>
+          </div>
+          <div id="piano-app-t-key">
+            <p class="piano-app-letter-padding">T</p>
+          </div>
+          <div id="piano-app-y-key">
+            <p class="piano-app-letter-padding">Y</p>
+          </div>
+          <div id="piano-app-u-key">
+            <p class="piano-app-letter-padding">U</p>
+          </div>
+        </div>
+        <div class="piano-app-map-white-keys">
+          <div>
+            <p class="piano-app-letter-padding">A</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding">S</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding">D</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding">F</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding">G</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding">H</p>
+          </div>
+          <div>
+            <p class="piano-app-letter-padding" style="padding: 0 5px;">J</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
